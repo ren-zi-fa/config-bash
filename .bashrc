@@ -104,6 +104,11 @@ alias la='ls -A'
 alias l='ls -CF'
 alias fd='fdfind'
 alias cls='clear'
+alias ccls='clear'
+#alias biar ga typo
+
+alias cdc='cd'
+alias cdd='cd'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -142,3 +147,13 @@ if [ -f /usr/share/bash-completion/completions/docker ]; then
     source /usr/share/bash-completion/completions/docker
 fi
 
+#docker compose dev
+alias dc-dev-up='docker compose -p dev --env-file .env.dev -f docker-compose.dev.yml up -d'
+alias dc-dev-down='docker compose -p dev --env-file .env.dev -f docker-compose.dev.yml up down'
+#docker compose prod
+alias dc-prod-up='docker compose -p prod  --env-file .env.prod -f docker-compose.prod.yml up -d'
+alias dc-prod-down='docker compose -p prod --env-file .env.prod -f docker-compose.prod.yml down'
+
+
+#hanya contoh untuk memasukkan env
+export ENV_KU=renzi
